@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .heading {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Welcome to my product management system CRUD application. Please find below the relevant APIs to test the
+        application:-
+    </h2>
+    <ol>
+        <li class="heading">Create:
+            <ul>
+                <li>
+                    Request Method: POST
+                </li>
+                <li>
+                    Request API: http://localhost:5100/api/product/create
+                </li>
+                <li>
+                    Request Body: {"productName": "apple"}
+                </li>
+            </ul>
+        </li>
+        <li class="heading">Retrieve Single Product:
+            <ul>
+                <li>
+                    Request Method: GET
+                </li>
+                <li>
+                    Request API: http://localhost:5100/api/product/retrieve/:productId
+                </li>
+            </ul>
+        </li>
+        <li class="heading">Retrieve All Products:
+            <ul>
+                <li>
+                    Request Method: GET
+                </li>
+                <li>
+                    Request API: http://localhost:5100/api/product/retrieve
+                </li>
+            </ul>
+        </li>
+        <li class="heading">Update:
+            <ul>
+                <li>
+                    Request Method: PUT
+                </li>
+                <li>
+                    Request API: http://localhost:5100/api/product/update/:productId
+                </li>
+                <li>
+                    Request Body: {"productName": "apple cream"}
+                </li>
+            </ul>
+        </li>
+        <li class="heading">Delete:
+            <ul>
+                <li>
+                    Request Method: DELETE
+                </li>
+                <li>
+                    Request API: http://localhost:5100/api/product/delete/:productId
+                </li>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>
