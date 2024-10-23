@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express from "express";
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 import router from "./routes/product.routes.js";
@@ -16,7 +16,7 @@ app.use(express.json());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.use(function (req: Request, res: Response, next: NextFunction) {
+app.use(function (res: any, next: any) {
   res.setHeader(
     "Content-Security-Policy",
     "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.com  https://cdnjs.cloudflare.com http://localhost:5100/js/main.ts; img-src 'self' https://res.cloudinary.com https://cdnjs.com  https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.com  https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.com  https://cdnjs.cloudflare.com"
@@ -29,12 +29,12 @@ app.use(function (req: Request, res: Response, next: NextFunction) {
 app.use("/api/product", router);
 
 //render homepage
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (res: any) => {
   res.sendFile(path.resolve(__dirname, "index.html"));
 });
 
 //display "Page Not Found" for invalid routes
-app.use("*", (req: Request, res: Response) => {
+app.use("*", (res: any) => {
   res.send("Page Not Found").status(StatusCodes.NOT_FOUND);
 });
 
