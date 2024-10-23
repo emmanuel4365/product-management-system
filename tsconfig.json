@@ -114,4 +114,5 @@
     "src/**/*.ts",
     "test/**/*.ts",
   ],
+  "types": ["node"]
 }
