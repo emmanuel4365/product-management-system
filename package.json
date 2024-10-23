@@ -5,7 +5,8 @@
   "main": "src/app.ts",
   "type": "module",
   "scripts": {
-    "start": "tsx ./src/app.ts",
+    "start": "node ./build/app.js",
+    "build": "tsc",
     "dev": "tsx watch ./src/app.ts ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
